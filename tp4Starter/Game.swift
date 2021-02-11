@@ -16,7 +16,7 @@ class Game: Decodable {
     var platform: String
     
     static func fakeGame() -> Game {
-        return Game("Naruto", "fake small image", "fake big image", 4, "xbox")
+        return Game(name: "Naruto", id: 0,smallImageURL: "fake small image", bigImageURL: "fake big image", score: 4, platform: "xbox")
     }
 
     init(name: String, id:Int, smallImageURL: String, bigImageURL: String, score: Int, platform: String) {
