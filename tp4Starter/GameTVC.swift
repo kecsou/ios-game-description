@@ -9,8 +9,12 @@ import UIKit
 
 class GameTVC: UITableViewController {
 
+    var games = [Game]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        for _ in 1...10 {
+            self.games.append(Game.fakeGame())
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -23,23 +27,23 @@ class GameTVC: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.games.count
     }
 
-    /*
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath)
 
         // Configure the cell...
-
+        let game = self.games[indexPath.row]
+        cell.textLabel?.text = game.name
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
