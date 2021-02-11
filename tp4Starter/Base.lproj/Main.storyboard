@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="amz-lS-A9t">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tX4-dc-haK">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,19 +13,19 @@
             <objects>
                 <tableViewController id="amz-lS-A9t" customClass="GameTVC" customModule="tp4Starter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7uZ-LX-kbI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="gameCell" textLabel="h5e-ru-2g2" style="IBUITableViewCellStyleDefault" id="fae-jo-HEy">
-                                <rect key="frame" x="0.0" y="28" width="414" height="85"/>
+                                <rect key="frame" x="0.0" y="28" width="428" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fae-jo-HEy" id="yPu-Lo-yRh">
-                                    <rect key="frame" x="0.0" y="0.0" width="383" height="85"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="396.66666666666669" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h5e-ru-2g2">
-                                            <rect key="frame" x="20" y="0.0" width="355" height="85"/>
+                                            <rect key="frame" x="20" y="0.0" width="368.66666666666669" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -34,7 +34,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="pa1-tR-hHK" kind="show" id="O85-yw-PDN"/>
+                                    <segue destination="pa1-tR-hHK" kind="show" identifier="pushDetail" id="O85-yw-PDN"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -54,16 +54,63 @@
             <objects>
                 <viewController id="pa1-tR-hHK" customClass="GameDetailVC" customModule="tp4Starter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="43z-ul-wwY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jn1-Mh-aOD">
+                                <rect key="frame" x="20" y="158.66666666666666" width="388" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="LlL-vb-aic"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHa-0o-m0o">
+                                <rect key="frame" x="343" y="285" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="platform" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gB9-em-KJR">
+                                <rect key="frame" x="20" y="285" width="65" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="S0o-H5-ufK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gameTitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2i-T6-JnS">
+                                <rect key="frame" x="90" y="98" width="248" height="20.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="pcd-oS-ptx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jn1-Mh-aOD" firstAttribute="top" secondItem="R2i-T6-JnS" secondAttribute="bottom" constant="40" id="2t3-MW-h2E"/>
+                            <constraint firstItem="jn1-Mh-aOD" firstAttribute="leading" secondItem="pcd-oS-ptx" secondAttribute="leading" constant="20" id="3zW-Xs-2Wa"/>
+                            <constraint firstItem="pcd-oS-ptx" firstAttribute="trailing" secondItem="jn1-Mh-aOD" secondAttribute="trailing" constant="20" id="5QI-vF-bpM"/>
+                            <constraint firstItem="R2i-T6-JnS" firstAttribute="leading" secondItem="pcd-oS-ptx" secondAttribute="leading" constant="90" id="8pJ-5o-QRE"/>
+                            <constraint firstItem="gB9-em-KJR" firstAttribute="top" secondItem="jn1-Mh-aOD" secondAttribute="bottom" constant="57.333333333333343" id="Bqb-fu-F6W"/>
+                            <constraint firstItem="pcd-oS-ptx" firstAttribute="trailing" secondItem="LHa-0o-m0o" secondAttribute="trailing" constant="42" id="J4x-yi-vf7"/>
+                            <constraint firstItem="R2i-T6-JnS" firstAttribute="top" secondItem="pcd-oS-ptx" secondAttribute="top" constant="10" id="Rnx-EE-bcy"/>
+                            <constraint firstItem="gB9-em-KJR" firstAttribute="leading" secondItem="jn1-Mh-aOD" secondAttribute="leading" id="VZH-Hy-9el"/>
+                            <constraint firstItem="pcd-oS-ptx" firstAttribute="trailing" secondItem="R2i-T6-JnS" secondAttribute="trailing" constant="90" id="YMV-2R-kDZ"/>
+                            <constraint firstItem="LHa-0o-m0o" firstAttribute="firstBaseline" secondItem="gB9-em-KJR" secondAttribute="firstBaseline" id="nwX-s7-frj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iMU-qx-hxF"/>
+                    <connections>
+                        <outlet property="gameTitle" destination="R2i-T6-JnS" id="xgZ-cx-kmd"/>
+                        <outlet property="imageGame" destination="jn1-Mh-aOD" id="Vmx-L8-McV"/>
+                        <outlet property="platformGame" destination="gB9-em-KJR" id="NYy-qi-dk0"/>
+                        <outlet property="scoreGame" destination="LHa-0o-m0o" id="1sz-Cu-Ktw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHq-2O-nfs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1338" y="10"/>
+            <point key="canvasLocation" x="1337.3831775700933" y="9.0712742980561565"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xJC-e8-WPT">
@@ -71,7 +118,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tX4-dc-haK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gjr-FH-sGv">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

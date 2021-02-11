@@ -56,9 +56,6 @@ class GameTVC: UITableViewController {
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                     }
-                    for game in self.games {
-                        print(game.name)
-                    }
                 }
                 catch {
                     debugPrint("Failed to parse data")
@@ -90,8 +87,7 @@ class GameTVC: UITableViewController {
         if let textLabel = cell.textLabel {
             textLabel.text = game.name
         }
-        
-        
+
         if let imageView = cell.imageView {
             let url = URL(string: game.smallImageURL)
             if let url = url {
@@ -143,10 +139,17 @@ class GameTVC: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "pushDetail" {
+            let gameDetailVC: GameDetailVC = segue.destination as! GameDetailVC
+            let indexPath = self.tableView.indexPath(for: sender as! UITableViewCell)
+            if let indexPath = indexPath {
+                let game = self.games[indexPath.row]
+                    gameDetailVC.gameToDisplay(game: game)
+            }
+        }
     }
-    */
-
 }
