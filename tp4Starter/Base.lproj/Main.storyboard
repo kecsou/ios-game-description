@@ -58,19 +58,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jn1-Mh-aOD">
-                                <rect key="frame" x="20" y="158.66666666666666" width="388" height="69"/>
+                                <rect key="frame" x="20" y="158.66666666666663" width="388" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="69" id="LlL-vb-aic"/>
+                                    <constraint firstAttribute="height" constant="300" id="LlL-vb-aic"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHa-0o-m0o">
-                                <rect key="frame" x="343" y="285" width="43" height="21"/>
+                                <rect key="frame" x="343" y="516" width="43" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="platform" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gB9-em-KJR">
-                                <rect key="frame" x="20" y="285" width="65" height="24"/>
+                                <rect key="frame" x="20" y="516" width="65" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="S0o-H5-ufK"/>
                                 </constraints>
