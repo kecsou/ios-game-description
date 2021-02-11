@@ -14,6 +14,8 @@
 		375111F525D52A6F00CAF13A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 375111F425D52A6F00CAF13A /* Assets.xcassets */; };
 		375111F825D52A6F00CAF13A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 375111F625D52A6F00CAF13A /* LaunchScreen.storyboard */; };
 		3751120125D52B1C00CAF13A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3751120025D52B1C00CAF13A /* Game.swift */; };
+		4301176D25D56CAF00BA5F49 /* GameTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4301176C25D56CAF00BA5F49 /* GameTVC.swift */; };
+		4301177025D56CEE00BA5F49 /* GameDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4301176F25D56CEE00BA5F49 /* GameDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		375111F725D52A6F00CAF13A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		375111F925D52A6F00CAF13A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3751120025D52B1C00CAF13A /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		4301176C25D56CAF00BA5F49 /* GameTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTVC.swift; sourceTree = "<group>"; };
+		4301176F25D56CEE00BA5F49 /* GameDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				375111ED25D52A6D00CAF13A /* SceneDelegate.swift */,
 				375111EF25D52A6D00CAF13A /* ViewController.swift */,
 				375111F125D52A6D00CAF13A /* Main.storyboard */,
+				4301176C25D56CAF00BA5F49 /* GameTVC.swift */,
+				4301176F25D56CEE00BA5F49 /* GameDetailVC.swift */,
 				375111F425D52A6F00CAF13A /* Assets.xcassets */,
 				375111F625D52A6F00CAF13A /* LaunchScreen.storyboard */,
 				375111F925D52A6F00CAF13A /* Info.plist */,
@@ -144,6 +150,8 @@
 				375111EC25D52A6D00CAF13A /* AppDelegate.swift in Sources */,
 				375111EE25D52A6D00CAF13A /* SceneDelegate.swift in Sources */,
 				3751120125D52B1C00CAF13A /* Game.swift in Sources */,
+				4301176D25D56CAF00BA5F49 /* GameTVC.swift in Sources */,
+				4301177025D56CEE00BA5F49 /* GameDetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
