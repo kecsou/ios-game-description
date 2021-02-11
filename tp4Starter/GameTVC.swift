@@ -25,6 +25,7 @@ class GameTVC: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    // MARK: Download games functions
     func download(at url: String, handler: @escaping (Data?) -> Void) {
         // 1 - Create URL
         guard let url = URL(string: url) else {
@@ -53,7 +54,6 @@ class GameTVC: UITableViewController {
                 do {
                     self.games = try decoder.decode([Game].self, from: gameData)
                     DispatchQueue.main.async {
-                        //TODO : uncomment the following line to reload your tableview
                         self.tableView.reloadData()
                     }
                     for game in self.games {
@@ -87,7 +87,20 @@ class GameTVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath)
 
         let game = self.games[indexPath.row]
-        cell.textLabel?.text = game.name
+        if let textLabel = cell.textLabel {
+            textLabel.text = game.name
+        }
+        
+        
+        if let imageView = cell.imageView {
+            let url = URL(string: game.smallImageURL)
+            if let url = url {
+                let data = try? Data.init(contentsOf: url)
+                if let data = data {
+                    imageView.image = UIImage(data: data)
+                }
+            }
+        }
         return cell
     }
 
